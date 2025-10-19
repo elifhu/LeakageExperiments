@@ -41,6 +41,7 @@ model.fit(X, y)
 y_pred = model.predict(X)
 
 # Sonuçları çiz
+fig1 = plt.figure(1)
 plt.scatter(X, y, color='blue', label='Gerçek Değerler')
 plt.plot(X, y_pred, color='red', label='Tahmin Edilen Doğru')
 plt.title('Basit Lineer Regresyon')
@@ -48,10 +49,19 @@ plt.xlabel('X')
 plt.ylabel('y')
 plt.legend()
 plt.tight_layout()
-plt.show(block=False)
+fig1.savefig("regression_plot.png")
 
 # Model değerlendirmesi
 mse = model.evaluate(X, y)
-print(f"Ortalama Kare Hata (MSE): {mse:.2f}")
-print(f"Eğim (slope): {model.slope:.2f}")
-print(f"Y-kesişim (intercept): {model.intercept:.2f}")
+# print(f"Ortalama Kare Hata (MSE): {mse:.2f}")
+# print(f"Eğim (slope): {model.slope:.2f}")
+# print(f"Y-kesişim (intercept): {model.intercept:.2f}")
+
+fig2 = plt.figure(2)
+plt.plot([1, 2, 3], [4, 5, 6])
+fig2.savefig("debug_plot.png")
+
+if __name__ == "__main__":
+    print(f"Ortalama Kare Hata (MSE): {mse:.2f}")
+    print(f"Eğim (slope): {model.slope:.2f}")
+    print(f"Y-kesişim (intercept): {model.intercept:.2f}")
