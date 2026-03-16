@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Variable & Coef. & HC3 SE & z & p-value \\
+\midrule
+Intercept & -0.0100 & 0.0127 & -0.78 & 0.434 \\
+Skew & 0.6795 & 0.0514 & 13.22 & 7.14e-40 \\
+Volatility & -0.4542 & 0.1620 & -2.80 & 0.00504 \\
+Volume proxy & -0.1828 & 0.0741 & -2.47 & 0.0136 \\
+Liquidity proxy & -0.2110 & 0.0867 & -2.43 & 0.015 \\
+\bottomrule
+\end{tabular}
+\caption{State-dependent regression of reval on skew, volatility, volume proxy and liquidity proxy with HC3 robust standard errors.}
+\label{tab:state_regression}
+\end{table}
