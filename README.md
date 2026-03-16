@@ -77,59 +77,74 @@ These models aim to learn counterparty trading styles and toxicity patterns dire
 
 # Repository Structure
 
-leakage-experiments/
-
-data/
+data/  
 cached or processed market data
 
-diagnostics/
+diagnostics/  
 analysis outputs and intermediate diagnostics
 
-leakage/
+leakage/  
 leakage-specific computations and graph signal processing logic
 
-models/
+models/  
 graph neural network models (GAT architecture under development)
 
-outputs/
+outputs/  
 generated figures and tables from experiments
 
-scripts/
+scripts/  
 main experiment pipelines and plotting scripts
 
-utils/
+utils/  
 helper utilities and shared functions
 
-config.py
+config.py  
 experiment configuration
 
-paths.py
+paths.py  
 repository path management
 
-requirements.txt
+requirements.txt  
 project dependencies
 
 ---
 
 # Running the Experiments
 
+
+
 Example pipelines:
 
 Build trade dataset
 python scripts/run_build_trade_table.py
 
+## Running the Experiments
+
+Build trade dataset
+
+```bash
+python scripts/run_build_trade_table.py
+```
+
 Regression baseline
+```bash
 python scripts/run_regression_pipeline.py
+```
 
 Graph spectral diagnostics
+```bash
 python scripts/run_gsp_pipeline.py
+```
 
 Trade graph analysis
+```bash
 python scripts/run_trade_graph_analysis.py
+```
 
 Generate figures
+```bash
 python scripts/make_spectral_gsp_flow_figure.py
-
+```
 
 ---
 
